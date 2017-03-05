@@ -30,8 +30,9 @@ var cloneFlags = []cli.Flag{
 }
 
 var commandGet = cli.Command{
-	Name:  "get",
-	Usage: "Clone/sync with a remote repository",
+	Name:    "get",
+	Aliases: []string{"g"},
+	Usage:   "Clone/sync with a remote repository",
 	Description: `
     Clone a GitHub repository under ghq root direcotry. If the repository is
     already cloned to local, nothing will happen unless '-u' ('--update')
@@ -43,8 +44,9 @@ var commandGet = cli.Command{
 }
 
 var commandList = cli.Command{
-	Name:  "list",
-	Usage: "List local repositories",
+	Name:    "list",
+	Aliases: []string{"ls"},
+	Usage:   "List local repositories",
 	Description: `
     List locally cloned repositories. If a query argument is given, only
     repositories whose names contain that query text are listed. '-e'
@@ -61,8 +63,9 @@ var commandList = cli.Command{
 }
 
 var commandLook = cli.Command{
-	Name:  "look",
-	Usage: "Look into a local repository",
+	Name:    "look",
+	Aliases: []string{"l"},
+	Usage:   "Look into a local repository",
 	Description: `
     Look into a locally cloned repository with the shell.
 `,
